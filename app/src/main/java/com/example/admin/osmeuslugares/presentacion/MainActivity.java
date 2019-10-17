@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -55,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });Da error de ejecucion en la declaracion de la variable boton??????*/
-        /*Button bAcercade = findViewById(R.id.bAcercaDe);
+        Button bAcercade = findViewById(R.id.bAcercaDe);
         bAcercade.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                CasoUsoActividades usoAcercaDE = new CasoUsoActividades(this);
-                usoAcercaDE.lanzarAcercaDe(null);
+               // CasoUsoActividades usoAcercaDE = new CasoUsoActividades(this);
+                //usoAcercaDE.lanzarAcercaDe(null);
             }
-        });*/
+        });
         /*******************
          * lanzamos la música
          ******************/
