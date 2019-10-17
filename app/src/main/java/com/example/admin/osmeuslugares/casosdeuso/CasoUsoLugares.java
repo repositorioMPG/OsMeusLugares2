@@ -7,7 +7,9 @@ import com.example.admin.osmeuslugares.modelo.Lugar;
 import com.example.admin.osmeuslugares.modelo.LugaresVector;
 import com.example.admin.osmeuslugares.presentacion.EdicionLugarActivity;
 import com.example.admin.osmeuslugares.presentacion.VistaLugarActivity;
-
+/*************************************************
+ * ACCIONES QUE TIENEN QUE VER CON LOS LUGARES
+ * **********************************************/
 public class CasoUsoLugares {
     private Activity actividad;
     private LugaresVector misLugares;

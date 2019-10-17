@@ -3,6 +3,7 @@ package com.example.admin.osmeuslugares.presentacion;
 import android.content.DialogInterface;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,19 +24,25 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
     private MediaPlayer mp;
-    //private Button bSalir = findViewById(R.id.bSalir);
+    /*esta declaracion daba error ya que asocion un boton antes del layout al que pertenece*/
+    private Button bSalir;// = findViewById(R.id.bSalir);
     private CasoUsoActividades usoActividades;
     private CasoUsoLugares usoLugares;
     private LugaresVector lugares ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        //1 creo lugares
-        lugares =((Aplicacion) getApplication()).getLugares();
-        //2 luegopaso lugares
-        usoActividades = new CasoUsoActividades(this, lugares);
-        usoLugares = new CasoUsoLugares(this, lugares);
+        /*CREO LA ACTIVIDAD MAIN*/
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //1 creo lugares
+        lugares =((Aplicacion) getApplication()).getLugares();
+        //2 luego paso lugares a la aplicacion
+        usoActividades = new CasoUsoActividades(this, lugares);
+        //3 estructura de acces lugares
+        usoLugares = new CasoUsoLugares(this, lugares);
+
+        bSalir = findViewById(R.id.bSalir);
         //setContentView(R.layout.activity_edicion_lugar);--> tiene algun error
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -51,18 +58,20 @@ public class MainActivity extends AppCompatActivity {
         /*************************************************************
          * escuchadores de eventos para boton salir
          * ***********************************************************/
-        /*bSalir.setOnClickListener(new View.OnClickListener() {
+        bSalir.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                finish();
+                salir(null);
             }
-        });Da error de ejecucion en la declaracion de la variable boton??????*/
-        Button bAcercade = findViewById(R.id.bAcercaDe);
+        });/*Da error de ejecucion en la declaracion de la variable boton
+        ya que estaba asociado a la interfaz grafica boton antes del layout*/
+
+        /*Button bAcercade = findViewById(R.id.bAcercaDe);
         bAcercade.setOnClickListener(new View.OnClickListener() {
-            /*public void onClick(View view) {
+            public void onClick(View view) {
                CasoUsoActividades usoAcercaDE = new CasoUsoActividades(this);
                usoAcercaDE.lanzarAcercaDe(null);
-            }*/
-        });
+            }
+        });*/
         /*******************
          * lanzamos la música
          ******************/
@@ -136,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public void lanzarVistaLugar(View view){
         final EditText entrada = new EditText(this);
+        //bloqueamos a numeros
+        entrada.setInputType(InputType.TYPE_CLASS_NUMBER);
         entrada.setText("0");
         new AlertDialog.Builder(this)
                 .setTitle("Selección de lugar")

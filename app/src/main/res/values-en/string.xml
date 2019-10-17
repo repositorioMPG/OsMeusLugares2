@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">OsMeusLugares</string>
     <string name="accion_mostrar">Show</string>
     <string name="accion_acerca_de">Abaout</string>
     <string name="accion_salir">Exit</string>
@@ -10,5 +11,6 @@
     <string name="tv_fecha">date</string>
     <string name="tv_hora">hour</string>
     <string name="tv_comentario">comentario</string>
+    <string name="cancelar">cancell</string>
 
 </resources>

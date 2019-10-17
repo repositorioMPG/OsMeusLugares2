@@ -58,7 +58,9 @@ public class EdicionLugarActivity extends AppCompatActivity {
         lugar.setNombre(nombre.getText().toString());
         lugar.setTipo(TipoLugar.values()[tipo.getSelectedItemPosition()]);
         lugar.setDireccion(direccion.getText().toString());
-        lugar.setTelefono(Integer.parseInt(telefono.getText().toString()));
+        if (telefono.getText().toString().isEmpty())
+            lugar.setTelefono(0);
+        else lugar.setTelefono(Integer.parseInt(telefono.getText().toString()));
         lugar.setUrl(url.getText().toString());
         lugar.setComentario(comentario.getText().toString());
     }

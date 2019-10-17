@@ -8,8 +8,11 @@ import android.widget.Toast;
 import com.example.admin.osmeuslugares.modelo.LugaresVector;
 import com.example.admin.osmeuslugares.presentacion.ACercaDeActivity;
 import com.example.admin.osmeuslugares.presentacion.PreferenciasActivity;
-
+/*************************************************
+* ACCIONES QUE TIENEN QUE VER CON LA APLICACION
+* **********************************************/
 public class CasoUsoActividades {
+
     //no necesita la lista de lugares
     //pero si la actividad
     private Activity actividad;

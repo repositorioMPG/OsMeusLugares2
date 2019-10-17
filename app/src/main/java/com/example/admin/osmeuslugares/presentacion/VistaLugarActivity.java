@@ -1,6 +1,7 @@
 package com.example.admin.osmeuslugares.presentacion;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.admin.osmeuslugares.R;
@@ -112,12 +114,30 @@ public class VistaLugarActivity extends AppCompatActivity {
                 usoLugar.editar(pos,RESULTADO_EDITAR);
                 break;
             case R.id.accion_borrar:
-                usoLugar.borrar(pos);
+                eliminarLugar(pos);
+
                 break;
             default:
                 opExito=super.onOptionsItemSelected(item);
         }
         return opExito;
+    }
+    /*metodos*/
+    public void eliminarLugar(final int posicion){
+        if (lugares.tamanyo()< posicion)
+            Toast.makeText(this, "Error: elemento no existe", Toast.LENGTH_LONG).show();
+        else {
+            new AlertDialog.Builder(this)
+                    .setTitle("Borrado de lugar")
+                    .setMessage("¿Esta serguro?")
+                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            usoLugar.borrar( posicion);
+                        }})
+                    .setNegativeButton("Cancelar", null)
+                    .show();
+
+        }
     }
     /***********************************************
      * codigo para
@@ -135,7 +155,8 @@ public class VistaLugarActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode){
 
-            case RESULTADO_EDITAR: actualizaVistas();
+            case RESULTADO_EDITAR:
+                                    actualizaVistas();
                                     break;
             case RESULTADO_GALERIA: //actualizaVistas();
                                     if (resultCode == Activity.RESULT_OK) {
