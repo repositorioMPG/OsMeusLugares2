@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity {
         });Da error de ejecucion en la declaracion de la variable boton??????*/
         Button bAcercade = findViewById(R.id.bAcercaDe);
         bAcercade.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-               // CasoUsoActividades usoAcercaDE = new CasoUsoActividades(this);
-                //usoAcercaDE.lanzarAcercaDe(null);
-            }
+            /*public void onClick(View view) {
+               CasoUsoActividades usoAcercaDE = new CasoUsoActividades(this);
+               usoAcercaDE.lanzarAcercaDe(null);
+            }*/
         });
         /*******************
          * lanzamos la música
