@@ -62,6 +62,7 @@ public class VistaLugarActivity extends AppCompatActivity {
 
     public void actualizaVistas() {
         imageView= (ImageView) findViewById(R.id.foto);
+        //imageView esta inicializada a la foto de res
         TextView nombre = findViewById(R.id.nombre);
         nombre.setText(lugar.getNombre());
         ImageView logo_tipo = findViewById(R.id.logo_tipo);
@@ -93,7 +94,8 @@ public class VistaLugarActivity extends AppCompatActivity {
                 });
         //imageView.setImageDrawable(lugar.getFoto());
 
-         ponerFoto(imageView, lugar.getFoto());
+        ponerFoto(imageView, lugar.getFoto());
+        //pongo la foto que realmente tiene el lugar
     }
     /*****************
     * MENU
@@ -162,7 +164,7 @@ public class VistaLugarActivity extends AppCompatActivity {
                                     if (resultCode == Activity.RESULT_OK) {
                                         lugar.setFoto(data.getDataString());
                                         ponerFoto(imageView, lugar.getFoto());
-                                        actualizaVistas();
+                                        //actualizaVistas();
                                     } else {
                                             Toast.makeText(this, "Foto no cargada", Toast.LENGTH_LONG).show();
                                     }
@@ -200,11 +202,12 @@ public class VistaLugarActivity extends AppCompatActivity {
         startActivityForResult(intent, RESULTADO_GALERIA);
     }
     protected void ponerFoto(ImageView imageView, String uri) {
+
         if (uri != null && !uri.isEmpty() && !uri.equals("null")) {
             imageView.setImageURI(Uri.parse(uri));
-        } else{
-           // imageView.setImageBitmap(null);--> no tiene espacio reservado...
-        }
+        } //else{
+           // mantengo la foto de inicio
+        //}
     }
     public void tomarFoto(View view) {
 
