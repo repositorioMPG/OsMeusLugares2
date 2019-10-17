@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tiposGraficos">tipo graficos</string-array>
+    <string-array name="tiposGraficosValores">tipo grafico valores</string-array>
+</resources>
