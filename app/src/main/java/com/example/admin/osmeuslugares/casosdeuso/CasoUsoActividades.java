@@ -10,7 +10,7 @@ import com.example.admin.osmeuslugares.presentacion.ACercaDeActivity;
 import com.example.admin.osmeuslugares.presentacion.PreferenciasActivity;
 /****************************
 * ACCIONES QUE TIENEN QUE VER CON LA APLICACION
-* ************************dsfsdf********/
+* *******************************/
 public class CasoUsoActividades {
 
     //no necesita la lista de lugares
