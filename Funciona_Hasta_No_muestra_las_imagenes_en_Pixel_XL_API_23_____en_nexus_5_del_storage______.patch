@@ -1,0 +1,16 @@
+Index: app/src/main/java/com/example/admin/osmeuslugares/casosdeuso/CasoUsoActividades.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/admin/osmeuslugares/casosdeuso/CasoUsoActividades.java	(date 1571419938000)
++++ app/src/main/java/com/example/admin/osmeuslugares/casosdeuso/CasoUsoActividades.java	(date 1571420134745)
+@@ -10,7 +10,7 @@
+ import com.example.admin.osmeuslugares.presentacion.PreferenciasActivity;
+ /****************************
+ * ACCIONES QUE TIENEN QUE VER CON LA APLICACION
+-* *******************************/
++* ********************wwerwerwerwerwer********/
+ public class CasoUsoActividades {
+ 
+     //no necesita la lista de lugares
