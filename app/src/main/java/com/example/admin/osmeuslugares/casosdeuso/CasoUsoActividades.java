@@ -8,7 +8,7 @@ import android.widget.Toast;
 import com.example.admin.osmeuslugares.modelo.LugaresVector;
 import com.example.admin.osmeuslugares.presentacion.ACercaDeActivity;
 import com.example.admin.osmeuslugares.presentacion.PreferenciasActivity;
-/********************************************
+/**************jkj****************************
 * ACCIONES QUE TIENEN QUE VER CON LA APLICACION
 * ********************************/
 public class CasoUsoActividades {
