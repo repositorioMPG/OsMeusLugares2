@@ -31,7 +31,7 @@ public class CasoUsoActividades {
         Intent i = new Intent(actividad, PreferenciasActivity.class);
         actividad.startActivity(i);
 
-        //Intent i = new Intent(actividad, ACercaDeActivity.class);
+        ////////////Intent i = new Intent(actividad, ACercaDeActivity.class);
         //////actividad.startActivity(i);
     }
     public void lanzarMapas(View view){
